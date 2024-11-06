@@ -16,21 +16,29 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+You can start editing the page by modifying `app/page.jsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Description
 
-## Learn More
+The app features a home page with intuitive selectors, allowing users to select their preferred car make and year. By clicking the Search button, users are navigated to a results page that displays a list of cars matching their chosen criteria.
 
-To learn more about Next.js, take a look at the following resources:
+## Features
+1. Home Page with Filter Selectors
+Vehicle Make Selector: Allows users to choose the car make from a dropdown populated with data fetched from an API.
+Model Year Selector: Lets users select the model year, with years dynamically generated from 2015 to the current year.
+Search Button: A Search button below the selectors that navigates to the results page. The button is disabled until both selectors have values.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Results Page
+Displays a list of cars based on the selected make and model year from the home page.
+Each car is shown with:
+Car Name
+Model ID
+Model Name
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## API Usage
+The app uses environment variables to store API URL, to handling API requests. API endpoints are defined in the .env.local file, which Next.js loads for use in both client and server code.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Technologies
+Next.js: A React-based framework for server-rendered applications and static websites.
+Tailwind CSS: Provides a responsive and customizable styling approach for the UI.
+Environment Variables: API URLs and other sensitive information are stored in .env.local.
